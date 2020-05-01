@@ -23,7 +23,7 @@
 //   }
 // }
 
-const hobbies = ['sports', 'cokking', 'reading'];
+// const hobbies = ['sports', 'cokking', 'reading'];
 // hobbies.push('reading');
 // hobbies.unshift('sking');
 // hobbies.shift();
@@ -31,5 +31,21 @@ const hobbies = ['sports', 'cokking', 'reading'];
 
 // hobbies[2] = 'coding';
 // hobbies[5] = 'boxing';//not use 99.99 cases
-hobbies.splice(2, 0, 'booking');
-console.log(hobbies);
+// hobbies.splice(2, 0, 'booking');
+// console.log(hobbies);
+
+const testArray = [2, 2.3, -6, 13, 14.33];
+// const resultArray = testArray.slice(2, 4);
+const resultArray = testArray.concat([4, 5.7, -6], 4, [45, 2]);
+
+testArray.push(10);
+console.log(testArray, resultArray);
+console.log(testArray.indexOf(2.3));
+
+const personData = [{ name: 'ali' }, { name: 'dany' }];
+console.log(personData.indexOf({ name: 'dany' }));
+
+const dany = personData.find((person, idx, personData) => {
+  return person.name === 'dany';
+});
+console.log(dany);
