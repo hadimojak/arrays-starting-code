@@ -70,7 +70,7 @@
 // console.log(taxAdjustedPrices);
 
 const prices = [10.99, 4.5, 60, 1];
-const tax = 0.19;
+/*const tax = 0.19;
 
 const textAdjuxtedPrices = prices.map((price, idx, prices) => {
   const priceObj = { index: idx, taxPrice: price * tax + price };
@@ -88,4 +88,40 @@ const sortedPrices = prices.sort((a, b) => {
     return -1;
   }
 });
+
 console.log(prices, sortedPrices);
+console.log('--------------------');
+console.log(prices.filter((price) => price > 10));
+console.log('----------------');
+
+let sun = 0;
+prices.forEach((price) => (sun += price)); //result is 76.49000000000001
+console.log(sun);
+
+const initVal = 0;
+const sum = prices.reduce(
+  (previosVal, currentVal) => previosVal + currentVal,
+  initVal,
+);
+console.log(sum);*/
+
+const data = 'newyork;10.99;2009';
+const transfomedData = data.split(';');
+console.log(transfomedData);
+
+const nameFragmentes = ['maxi', 'mill', 'yian'];
+const name = nameFragmentes.join(' ');
+console.log(name);
+
+const cpeidNameFragments = [...nameFragmentes];
+nameFragmentes.push('mandy');
+console.log(nameFragmentes, cpeidNameFragments);
+
+console.log(Math.min(...prices));
+
+const persons = [
+  { name: 'max', age: 30 },
+  { name: 'jey', age: 31 },
+];
+const copiedPersons = [...persons];
+console.log(copiedPersons);
