@@ -118,6 +118,7 @@ console.log(sum);*/
 // console.log(nameFragmentes, cpeidNameFragments);
 
 // console.log(Math.min(...prices));
+// console.log(...prices);
 
 // const persons = [
 //   { name: 'max', age: 30 },
@@ -125,8 +126,8 @@ console.log(sum);*/
 // ];
 
 // const copiedPersons = [
-//   map((person) => {
-//     ({ name: perso.name, age: person.age });
+//   persons.map((person) => {
+//     ({ name: person.name, age: person.age });
 //   }),
 // ];
 
@@ -139,3 +140,6 @@ const nameData = ['max', 'shity', 30, 'male'];
 
 const [firstName, lastName, ...otherInformation] = nameData;
 console.log(firstName, lastName, otherInformation);
+
+
+
