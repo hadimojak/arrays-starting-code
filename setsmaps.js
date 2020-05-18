@@ -1,13 +1,18 @@
-// const ids = new Set(['a', 'n', 'x']);
-// console.log(ids);
-// if (ids.has('a')) {
-//   ids.delete('a');
-// }
-// ids.add(2);
+const ids = new Set(["a", "n", "x"]);
+console.log(ids);
+try {
+  if (ids.has("z")) {
+    ids.delete("z");
+  } else {
+    throw { errorMessage: "not excist in set" };
+  }
+} catch (err) {
+  console.log(err);
+}
 
-// for (const entry of ids.entries()) {
-//   console.log(entry[0]);
-// }
+for (const entry of ids.entries()) {
+  console.log(entry[0]);
+}
 
 // const person1 = { name: 'max' };
 // const person2 = { name: 'manual' };
@@ -35,17 +40,17 @@
 //     console.log(val);
 //   }
 
-let person = { name: 'max' };
-const persons = new WeakSet();
-persons.add(person);
-console.log(persons);
+// let person = { name: 'max' };
+// const persons = new WeakSet();
+// persons.add(person);
+// console.log(persons);
 
-
-
-const personData = new WeakMap();
-personData.set(person, 'bbbb');
-person = null;
-console.log(personData);
+// const personData = new WeakMap();
+// personData.set(person, 'bbbb');
 // person = null;
+// console.log(personData);
+// // person = null;
 
-
+// const dataName = ["hadi", "arbabi", { age: 22, address: "iran" }];
+// const [firstName, lastName, ...info ]= dataName;
+// console.log(firstName, lastName, info[0]);
